@@ -18,10 +18,12 @@ TEMPLATE = app
 SOURCES += main.cpp\
         mainwindow.cpp \
     db.cpp \
-    qd.cpp
+    qd.cpp \
+    screen.cpp
 
 HEADERS  += mainwindow.h \
     db.h \
-    qd.h
+    qd.h \
+    screen.h
 
 FORMS    += mainwindow.ui

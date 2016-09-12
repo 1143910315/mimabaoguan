@@ -6,14 +6,12 @@
 #include<QSqlDatabase>
 #include<QSqlQuery>
 #include<QSqlError>
-void qd::ontimeout()
-{
+void qd::ontimeout(){
 
 }
 
 qd::qd()
 {
-
 	//splsh->hide();
 }
 bool qd::create(QString pixmap)
@@ -44,7 +42,7 @@ bool qd::connection()
 	}else{
 		QSqlQuery que(db1);
 		if
-		(que.exec("insert into [website] ([homepage],[explain],[loginpage]) values ('0','6','777')")){
+				(que.exec("insert into [website] ([homepage],[explain],[loginpage]) values ('0','6','777')")){
 
 			return false;
 		}
@@ -53,3 +51,6 @@ bool qd::connection()
 	}
 	return true;
 }
+
+
+
