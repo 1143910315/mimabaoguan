@@ -6,6 +6,7 @@ INPUT(
 ./release\screen.o
 ./release\caozuo.o
 ./release\caozuodengdai.o
+./release\qss.o
 ./release\moc_mainwindow.o
 ./release\moc_qd.o
 ./release\moc_screen.o

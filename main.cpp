@@ -4,17 +4,26 @@
 #include<qd.h>
 #include<screen.h>
 #include<caozuodengdai.h>
-#include<QSplashScreen>
+#include<qss.h>
 #include<QPixmap>
 int main(int argc, char *argv[])
 {
 	QApplication a(argc, argv);
 	QPixmap pixmap("E:\\QQ图片20160812121902.jpg");
-	QSplashScreen *splash=new QSplashScreen;
+	QSS *splash=new QSS;
     splash->setPixmap(pixmap);
     splash->show();
 	splash->showMessage(QObject::tr("加载中..."),Qt::AlignBottom|Qt::AlignCenter,Qt::white);
 	for(int i=0;i<1000;i++){
+		if(i%3==0){
+			splash->showMessage(QObject::tr("加载中."),Qt::AlignBottom|Qt::AlignCenter,Qt::white);
+		}
+		if(i%3==1){
+			splash->showMessage(QObject::tr("加载中.."),Qt::AlignBottom|Qt::AlignCenter,Qt::white);
+		}
+		if(i%3==2){
+			splash->showMessage(QObject::tr("加载中..."),Qt::AlignBottom|Qt::AlignCenter,Qt::white);
+		}
 		QTest::qSleep(10);
 		a.processEvents();
 	}

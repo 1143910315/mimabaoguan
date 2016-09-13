@@ -7,7 +7,7 @@
 QT       += core gui
 QT += sql
 QT += core
-QT+=testlib
+QT += testlib
 #CONFIG+=qtestlib
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -21,13 +21,15 @@ SOURCES += main.cpp\
     qd.cpp \
     screen.cpp \
     caozuo.cpp \
-    caozuodengdai.cpp
+    caozuodengdai.cpp \
+    qss.cpp
 
 HEADERS  += mainwindow.h \
     db.h \
     qd.h \
     screen.h \
     caozuo.h \
-    caozuodengdai.h
+    caozuodengdai.h \
+    qss.h
 
 FORMS    += mainwindow.ui
