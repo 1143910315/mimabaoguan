@@ -3,11 +3,46 @@
 #include<QtTest/QTest>
 #include<qd.h>
 #include<screen.h>
+#include<caozuodengdai.h>
+#include<QSplashScreen>
+#include<QPixmap>
 int main(int argc, char *argv[])
 {
 	QApplication a(argc, argv);
-	Screen b;
+	QPixmap pixmap("E:\\QQ图片20160812121902.jpg");
+	QSplashScreen *splash=new QSplashScreen;
+    splash->setPixmap(pixmap);
+    splash->show();
+	splash->showMessage(QObject::tr("加载中..."),Qt::AlignBottom|Qt::AlignCenter,Qt::white);
+	for(int i=0;i<1000;i++){
+		QTest::qSleep(10);
+		a.processEvents();
+	}
+	MainWindow w;
+	w.show();
+	splash->finish(&w);     //当主窗口启动后，启动画面隐藏
+    delete splash;
+	//caozuodengdai *dd=new caozuodengdai();
+	//dd->create("E:\\QQ图片20160812121902.jpg");
+	//Screen b;
+/*
+    QTextCodec :: setCodecForTr( QTextCodec :: codecForName( "GB18030" ));
+	QApplication app(argc,argv);
 
+    QPixmap pixmap(":/images/logo.gif");      //绑定一个图片
+    QSplashScreen *splash=new QSplashScreen;
+    splash.setPixmap(pixmap);
+    splash.show();                            //显示启动画面
+    app.processEvents();                //加载其他的模块
+
+    mainWindow dialog;
+    dialog.show();
+
+    splash.finish(&dialog);     //当主窗口启动后，启动画面隐藏
+    delete splash;
+
+    return app.exec();
+*/
 	//qd *q=new qd();
 	//if(q->connection()){
 		//MainWindow w;

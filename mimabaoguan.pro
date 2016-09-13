@@ -19,11 +19,15 @@ SOURCES += main.cpp\
         mainwindow.cpp \
     db.cpp \
     qd.cpp \
-    screen.cpp
+    screen.cpp \
+    caozuo.cpp \
+    caozuodengdai.cpp
 
 HEADERS  += mainwindow.h \
     db.h \
     qd.h \
-    screen.h
+    screen.h \
+    caozuo.h \
+    caozuodengdai.h
 
 FORMS    += mainwindow.ui

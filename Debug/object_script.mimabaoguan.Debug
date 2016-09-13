@@ -1,0 +1,12 @@
+INPUT(
+./debug\main.o
+./debug\mainwindow.o
+./debug\db.o
+./debug\qd.o
+./debug\screen.o
+./debug\caozuo.o
+./debug\caozuodengdai.o
+./debug\moc_mainwindow.o
+./debug\moc_qd.o
+./debug\moc_screen.o
+);
