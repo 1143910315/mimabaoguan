@@ -1,6 +1,7 @@
 #include "caozuo.h"
 
-caozuo::caozuo()
+
+void caozuo::run()
 {
 
 }

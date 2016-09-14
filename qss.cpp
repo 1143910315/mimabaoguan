@@ -5,7 +5,12 @@ QSS::QSS()
 
 }
 
-void QSS::mousePressEvent(QMouseEvent *)
+QSS::~QSS()
+{
+
+}
+
+void QSS::mousePressEvent(QMouseEvent *e)
 {
 
 }

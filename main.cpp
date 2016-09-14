@@ -15,13 +15,13 @@ int main(int argc, char *argv[])
     splash->show();
 	splash->showMessage(QObject::tr("加载中..."),Qt::AlignBottom|Qt::AlignCenter,Qt::white);
 	for(int i=0;i<1000;i++){
-		if(i%3==0){
-			splash->showMessage(QObject::tr("加载中."),Qt::AlignBottom|Qt::AlignCenter,Qt::white);
+		if(i/10%3==0){
+			splash->showMessage(QObject::tr("加载中.  "),Qt::AlignBottom|Qt::AlignCenter,Qt::white);
 		}
-		if(i%3==1){
-			splash->showMessage(QObject::tr("加载中.."),Qt::AlignBottom|Qt::AlignCenter,Qt::white);
+		if(i/10%3==1){
+			splash->showMessage(QObject::tr("加载中.. "),Qt::AlignBottom|Qt::AlignCenter,Qt::white);
 		}
-		if(i%3==2){
+		if(i/10%3==2){
 			splash->showMessage(QObject::tr("加载中..."),Qt::AlignBottom|Qt::AlignCenter,Qt::white);
 		}
 		QTest::qSleep(10);
