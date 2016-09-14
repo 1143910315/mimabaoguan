@@ -7,9 +7,12 @@ class caozuo : public QThread
 	Q_OBJECT
 public:
 	caozuo();
+	bool getfinsh();
 	~caozuo();
 protected:
   void run();
+private:
+  bool finsh=true;
 };
 
 #endif // CAOZUO_H

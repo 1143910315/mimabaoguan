@@ -7,7 +7,9 @@ INPUT(
 ./debug\caozuo.o
 ./debug\caozuodengdai.o
 ./debug\qss.o
+./debug\list.o
 ./debug\moc_mainwindow.o
 ./debug\moc_qd.o
 ./debug\moc_screen.o
+./debug\moc_caozuo.o
 );

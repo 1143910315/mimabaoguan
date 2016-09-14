@@ -22,7 +22,8 @@ SOURCES += main.cpp\
     screen.cpp \
     caozuo.cpp \
     caozuodengdai.cpp \
-    qss.cpp
+    qss.cpp \
+    list.cpp
 
 HEADERS  += mainwindow.h \
     db.h \
@@ -30,6 +31,9 @@ HEADERS  += mainwindow.h \
     screen.h \
     caozuo.h \
     caozuodengdai.h \
-    qss.h
+    qss.h \
+    list.h
 
 FORMS    += mainwindow.ui
+
+DISTFILES +=

@@ -6,6 +6,7 @@
 #include<caozuodengdai.h>
 #include<qss.h>
 #include<QPixmap>
+#include<caozuo.h>
 int main(int argc, char *argv[])
 {
 	QApplication a(argc, argv);
@@ -14,16 +15,10 @@ int main(int argc, char *argv[])
     splash->setPixmap(pixmap);
     splash->show();
 	splash->showMessage(QObject::tr("加载中..."),Qt::AlignBottom|Qt::AlignCenter,Qt::white);
-	for(int i=0;i<1000;i++){
-		if(i/10%3==0){
-			splash->showMessage(QObject::tr("加载中.  "),Qt::AlignBottom|Qt::AlignCenter,Qt::white);
-		}
-		if(i/10%3==1){
-			splash->showMessage(QObject::tr("加载中.. "),Qt::AlignBottom|Qt::AlignCenter,Qt::white);
-		}
-		if(i/10%3==2){
-			splash->showMessage(QObject::tr("加载中..."),Qt::AlignBottom|Qt::AlignCenter,Qt::white);
-		}
+	caozuo *caoz=new caozuo();
+	caoz->start();
+	while(caoz->getfinsh()){
+		splash->showMessage(QObject::tr("加载中..."),Qt::AlignBottom|Qt::AlignCenter,Qt::white);
 		QTest::qSleep(10);
 		a.processEvents();
 	}

@@ -7,7 +7,9 @@ INPUT(
 ./release\caozuo.o
 ./release\caozuodengdai.o
 ./release\qss.o
+./release\list.o
 ./release\moc_mainwindow.o
 ./release\moc_qd.o
 ./release\moc_screen.o
+./release\moc_caozuo.o
 );
